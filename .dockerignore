@@ -33,3 +33,4 @@ backend/**/*_test.go
 !tools/egress-quality-guard/
 !tools/egress-quality-guard/quality_guard.py
 !tools/egress-quality-guard/session_rotator.py
+!config.yaml
