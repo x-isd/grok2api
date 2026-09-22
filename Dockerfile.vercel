@@ -72,4 +72,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
     CMD wget -qO- http://127.0.0.1:8000/healthz >/dev/null || exit 1
 
 ENTRYPOINT []
-CMD ["sh", "-c", "mkdir -p /run/grok2api && echo \"$GROK2API_CONFIG_YAML\" | base64 -d > /run/grok2api/config.yaml && exec /usr/local/bin/grok2api-entrypoint /app/grok2api --config /app/config.yaml --listen 0.0.0.0:${PORT:-10000}"]
+CMD ["sh", "-c", "mkdir -p /run/grok2api && echo \"$GROK2API_CONFIG_YAML\" | base64 -d > /run/grok2api/config.yaml && exec /usr/local/bin/grok2api-entrypoint /app/grok2api --config /app/config.yaml --listen 0.0.0.0:${PORT:-8000}"]
